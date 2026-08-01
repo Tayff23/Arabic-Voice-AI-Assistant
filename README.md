@@ -1,22 +1,22 @@
-# Arabic Voice AI Assistant
+# Voice Chatbot with Gemini AI
 
-A browser-based Arabic voice assistant that uses speech recognition, Google Gemini AI, and text-to-speech to provide voice conversations.
+A browser-based voice chatbot that uses the Gemini API, Speech Recognition, and Text-to-Speech to provide interactive voice conversations.
 
 ---
 
-## Project Overview
+## About the Project
 
-This project allows users to communicate with an AI assistant using their voice.
+This project is a voice-enabled AI chatbot that allows users to communicate using their microphone.
 
-The browser converts speech into text, sends it securely to a PHP backend, which communicates with the Gemini API, then returns the response to the webpage. Finally, the browser reads the response aloud using Text-to-Speech.
+The browser converts speech into text using the Web Speech API. The text is then sent securely to a PHP backend, which communicates with the Gemini API and returns the AI response. Finally, the browser reads the response aloud using Text-to-Speech.
 
 ---
 
 ## Features
 
-- 🎤 Voice input
-- 🤖 AI-generated responses using Google Gemini
-- 🔊 Text-to-Speech
+- 🎤 Voice input using Speech Recognition
+- 🤖 AI responses powered by Gemini API
+- 🔊 Text-to-Speech responses
 - 💬 Chat interface
 - 📱 Responsive design
 - 🔒 Secure API key storage using PHP
@@ -29,7 +29,7 @@ The browser converts speech into text, sends it securely to a PHP backend, which
 - CSS3
 - JavaScript
 - PHP
-- Google Gemini API
+- Gemini API
 - Web Speech API
 - XAMPP (Local Server)
 
@@ -40,52 +40,64 @@ The browser converts speech into text, sends it securely to a PHP backend, which
 1. The user clicks the microphone button.
 2. Speech Recognition converts speech into text.
 3. JavaScript sends the text to the PHP backend.
-4. PHP securely sends the request to the Gemini API.
+4. PHP securely calls the Gemini API.
 5. Gemini generates a response.
-6. The response appears in the chat.
+6. The response is displayed in the chat.
 7. The browser reads the response aloud.
 
 ---
 
-## Problem Found
+## Problem Encountered
 
-Initially, the chatbot displayed:
+When testing the chatbot, the application displayed the following message:
 
-> "حدث خطأ أثناء الاتصال بالخادم"
+> "An error occurred while connecting to the server."
 
-The backend returned HTTP errors because of configuration issues while connecting to the Gemini API.
+After debugging, the issue was found to be related to the PHP backend and API communication.
 
----
+The following fixes were applied:
 
-## Solution
+- Fixed the PHP backend configuration.
+- Corrected the API request path.
+- Added and configured the Gemini API key correctly.
+- Updated the API model to a supported version.
+- Fixed file paths and project structure.
+- Corrected CSS loading issues.
+- Tested the chatbot until successful communication with the Gemini API was achieved.
 
-The following issues were fixed:
-
-- Fixed the PHP file path.
-- Corrected the connection between JavaScript and PHP.
-- Configured the API key correctly.
-- Updated the API model to a supported Gemini model.
-- Verified JSON responses from the backend.
-- Tested the application on a local XAMPP server until it returned successful responses.
-
-After these fixes, the chatbot successfully processed voice input and generated AI responses.
+After these fixes, the chatbot successfully received and displayed AI responses.
 
 ---
 
-## Lessons Learned
+## Screenshot
+
+![Voice Chatbot](screenshots/chat-response.png)
+
+---
+
+## What I Learned
 
 Through this project I learned how to:
 
-- Debug PHP applications
-- Connect JavaScript with a backend API
-- Handle JSON requests and responses
-- Secure API keys
-- Work with REST APIs
-- Test projects using XAMPP
-- Troubleshoot API errors
+- Debug PHP applications.
+- Connect JavaScript with a PHP backend.
+- Work with REST APIs.
+- Secure API keys.
+- Handle API error responses.
+- Troubleshoot server-side issues.
+- Test and fix communication between the frontend and backend.
 
 ---
 
-## Author
+## Final Result
 
-Developed as part of a practical training task.
+The voice chatbot now works successfully by:
+
+- Receiving voice input.
+- Sending requests to the Gemini API.
+- Displaying AI responses.
+- Reading responses aloud using Text-to-Speech.
+
+---
+
+Built using HTML, CSS, JavaScript, PHP, and Gemini AI.
